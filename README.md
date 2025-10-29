@@ -1,2 +1,3 @@
-# my-portfolio
-My personal portfolio built with Next.js, Tailwind CSS, Node.js + Express
+# My Portfolio
+
+Tech Stack: Next.js + TypeScript + Tailwind CSS + Node.js + Express
