@@ -1,0 +1,8 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+/* LIGHT MODE */
+root:{
+  --button-outline: rgb(29, 9, 35);
+  --button-bg: rgb(100, 31, 119);
+}
