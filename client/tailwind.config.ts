@@ -4,7 +4,11 @@ import typography from "@tailwindcss/typography";
 
 export default {
   darkMode: ["class", ".dark-theme"],
-  content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+  "./src/app/**/*.{ts,tsx}",
+  "./src/components/**/*.{ts,tsx}",
+  "./src/**/*.{css,js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
       borderRadius: {
