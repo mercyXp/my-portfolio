@@ -1,17 +1,34 @@
+"use client";
 
+import { Link } from "wouter";
 
 function Header(){
+    const navItems = [ 
+        { label: 'Home', href: '/' },
+        { label: 'Projects', href: '#projects' },
+        { label: 'About', href: '#about' },
+        { label: 'Contact', href: '#contact' },
+        { label: 'Blog', href: '#blog' },
+    ];
     return(
         <header>
             <span>Mercy</span>
             <nav>
-                <li>Home</li>
-                <li>Projects</li>
-                <li>About</li>
-                <li>Blog</li>
-                <li>Contact</li>
-                <li>Hire Me</li>
+                {navItems.map((item) => (
+                    <Link
+                        key = {item.href}
+                        href = {item.href}
+                        data-testid={`link-nav-${item.label.toLowerCase()}`}
+                    >
+                        <span>{item.label}</span>
+                    </Link>
+                ))}
             </nav>
+            <div>
+                <Link>
+                    <button>Hire Me</button>
+                </Link>
+            </div>
         </header>
     );
 }
