@@ -29,7 +29,7 @@
 
   --footer-bg: 203.77 87.6% 52.5%;
 
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-heading: 'Space Grotesk', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
   --font-serif: 'Source Serif Pro', serif;

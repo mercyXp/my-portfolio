@@ -26,7 +26,15 @@ const config: Config = {
         footerBg: "hsl(203.7736 87.6033% 52.5490%)",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: [
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji",
+        ],
         heading: ["Space Grotesk", "sans-serif"],
         mono: ["IBM Plex Mono", "monospace"],
         serif: ["Source Serif Pro", "serif"],

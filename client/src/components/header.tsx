@@ -50,7 +50,7 @@ function Header(){
                                         ? "text-foreground"
                                         : "text-muted-foreground hover:text-hover-link"
                                     }`}>
-                                    <Icon className="h-2 w-2"/> {/* size of the icons */}
+                                    <Icon className="h-4 w-4"/> {/* size of the icons */}
                                     {item.label}
                                 </span>
                             </Link>
