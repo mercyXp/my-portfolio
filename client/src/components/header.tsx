@@ -3,6 +3,7 @@
 import {useState} from 'react';
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import {
   Menu,
   X,
@@ -63,6 +64,7 @@ function Header(){
                 </nav>
                     {/* Desktop Button */}
                 <div className="hidden md:flex items-center gap-4">
+                    <ThemeToggle testId="button-theme-toggle" />
                     <Link href="/contact">
                         <Button data-testid="button-hire"
                              className="
@@ -95,7 +97,7 @@ function Header(){
                 </div>
                 {/* Mobile Menu Button */}
                 <div className="md:hidden flex items-center gap-2">
-                    
+                    <ThemeToggle testId="button-theme-toggle" />
                     <Button
                         variant="ghost"
                         size="icon"
