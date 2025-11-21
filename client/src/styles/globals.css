@@ -10,7 +10,7 @@
   --elevate-1: rgba(0,0,0,0.03);
   --elevate-2: rgba(0,0,0,0.08);
 
-  --background: 50 100% 97%; /* cream white */
+  --background: 45 60% 98%;; /* neutral warm white */
   --foreground: 0 0% 8.24%;
   --header-text: 0 0% 8.24%;
   --footer-text: 0 0% 100%;
@@ -27,7 +27,7 @@
   --destructive: 0.49 54.19% 55.49%;
   --destructive-foreground: 0 0% 100%;
 
-  --footer-bg: 203.77 87.6% 52.5%;
+  --footer-bg: 0% 0% 0%;
 
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-heading: 'Space Grotesk', sans-serif;

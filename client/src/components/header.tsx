@@ -1,8 +1,11 @@
 "use client";
 
+import {useState} from 'react';
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
+  Menu,
+  X,
   Home,
   FolderKanban,
   User,
@@ -23,9 +26,10 @@ function Header(){
     { label: "Education", href: "/education", icon: GraduationCap },
     { label: "Blog", href: "/blog", icon: FileText },
     ];
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return(
-        <header  className="sticky top-0 z-50 w-full border-b border-border bg-background/70 backdrop-blur-xl shadow-sm">
+        <header className="sticky top-0 z-50 w-full border-b border-border bg-background/70 backdrop-blur-xl shadow-sm">
             <div className="container mx-auto flex h-16 items-center justify-between px-6">
                  {/* Logo */}
                 <Link href="/" data-testid="link-home">
@@ -91,13 +95,20 @@ function Header(){
                 </div>
                 {/* Mobile Menu Button */}
                 <div className="md:hidden flex items-center gap-2">
-                
-                <button
-                    data-testid="button-mobile-menu"
-                    aria-label="Toggle menu"
-                    className="rounded-md"
-                >
-                </button>
+                    
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        data-testid="button-mobile-menu"
+                        aria-label="Toggle menu"
+                    >
+                        {mobileMenuOpen ? (
+                        <X className="h-5 w-5" />
+                        ) : (
+                        <Menu className="h-5 w-5" />
+                        )}
+                    </Button>
                 </div>
             </div>
         </header>
