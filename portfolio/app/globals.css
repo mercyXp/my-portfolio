@@ -1,0 +1,86 @@
+/* Tailwind CSS v4 Compatible file */
+@import "tailwindcss";
+
+/* -------------------------
+   Base Styles
+-------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gray-50 text-gray-800 antialiased;
+}
+
+/* -------------------------
+   Selection
+-------------------------- */
+::selection {
+  @apply bg-blue-500 text-white;
+}
+
+/* -------------------------
+   Scrollbar
+-------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* -------------------------
+   Animations
+-------------------------- */
+@keyframes cursor-blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.animate-cursor-blink {
+  animation: cursor-blink 1s step-end infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* -------------------------
+   Reveal Animation
+-------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* -------------------------
+   Utility Enhancements
+-------------------------- */
+.container {
+  @apply max-w-7xl mx-auto;
+}
