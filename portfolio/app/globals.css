@@ -1,76 +1,120 @@
-/* Tailwind CSS v4 Compatible file */
+/* Tailwind CSS v4 */
 @import "tailwindcss";
 
-/* -------------------------
+/* ========================================
+   Custom Theme Extensions
+======================================== */
+@theme {
+  /* Custom Font Families */
+  --font-family-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'Fira Code', 'Monaco', 'Courier New', monospace;
+
+  /* Brand Color Palette */
+  --color-brand-50: #fdf2f8;
+  --color-brand-100: #fce7f3;
+  --color-brand-200: #fbcfe8;
+  --color-brand-300: #f9a8d4;
+  --color-brand-400: #f472b6;
+  --color-brand-500: #ec4899;
+  --color-brand-600: #db2777;
+  --color-brand-700: #be185d;
+  --color-brand-800: #9d174d;
+  --color-brand-900: #831843;
+
+  /* Custom Animations */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-slide-up-fade: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-cursor-blink: blink 1s step-end infinite;
+}
+
+/* ========================================
+   Keyframe Animations
+======================================== */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ========================================
    Base Styles
--------------------------- */
+======================================== */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-gray-50 text-gray-800 antialiased;
+  @apply bg-slate-50 text-slate-900 antialiased;
 }
 
-/* -------------------------
-   Selection
--------------------------- */
+/* ========================================
+   Text Selection
+======================================== */
 ::selection {
-  @apply bg-blue-500 text-white;
+  @apply bg-brand-200 text-brand-900;
 }
 
-/* -------------------------
-   Scrollbar
--------------------------- */
+::-moz-selection {
+  @apply bg-brand-200 text-brand-900;
+}
+
+/* ========================================
+   Custom Scrollbar
+======================================== */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-transparent;
+  background: var(--color-brand-50);
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 rounded-full;
+  background: var(--color-brand-400);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-400;
+  background: var(--color-brand-500);
 }
 
-/* -------------------------
-   Animations
--------------------------- */
-@keyframes cursor-blink {
-  0%, 50%, 100% {
-    opacity: 1;
-  }
-  25%, 75% {
-    opacity: 0;
-  }
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brand-400) var(--color-brand-50);
 }
 
-.animate-cursor-blink {
-  animation: cursor-blink 1s step-end infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-/* -------------------------
-   Reveal Animation
--------------------------- */
+/* ========================================
+   Scroll Reveal Animation
+======================================== */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(30px);
+  transition: all 1s cubic-bezier(0.5, 0, 0, 1);
 }
 
 .reveal.active {
@@ -78,9 +122,49 @@ body {
   transform: translateY(0);
 }
 
-/* -------------------------
-   Utility Enhancements
--------------------------- */
+/* Staggered Animation Delays */
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.delay-400 {
+  transition-delay: 400ms;
+}
+
+.delay-500 {
+  transition-delay: 500ms;
+}
+
+/* ========================================
+   Utility Classes
+======================================== */
 .container {
-  @apply max-w-7xl mx-auto;
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Custom gradient backgrounds */
+.gradient-brand {
+  background: linear-gradient(135deg, var(--color-brand-500) 0%, var(--color-brand-700) 100%);
+}
+
+.gradient-brand-subtle {
+  background: linear-gradient(135deg, var(--color-brand-50) 0%, var(--color-brand-100) 100%);
+}
+
+/* Glass morphism effect */
+.glass {
+  @apply bg-white/80 backdrop-blur-lg border border-white/20;
+}
+
+/* Text gradient */
+.text-gradient-brand {
+  @apply bg-linear-to-r from-brand-500 to-brand-700 bg-clip-text text-transparent;
 }
