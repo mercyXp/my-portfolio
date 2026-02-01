@@ -1,19 +1,19 @@
 'use client';
 
 import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
 
 export type ButtonVariant = "primary" | "secondary" | "outline";
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   asChild?: boolean;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = "primary", asChild = false, ...props }, ref) => {
-    const Comp: any = asChild ? "span" : "button";
+  ({ className, variant = "primary", asChild = false, children, ...props }, ref) => {
+    const Component = asChild ? Slot : "button";
 
     const baseStyles =
       "inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-medium transition-all focus:outline-none focus:ring-2 focus:ring-brand-500/40 disabled:opacity-50 disabled:pointer-events-none";
@@ -28,14 +28,15 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     };
 
     return (
-      <Comp
+      <Component
         ref={ref}
         className={cn(baseStyles, variants[variant], className)}
         {...props}
-      />
+      >
+        {children}
+      </Component>
     );
   }
 );
 
 Button.displayName = "Button";
-export default Button;
