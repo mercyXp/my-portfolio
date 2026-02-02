@@ -3,6 +3,7 @@
 import React from 'react';
 import { ExternalLink, Github, FolderGit2, Globe, ArrowRight } from 'lucide-react';
 import Link from 'next/link'; // Fixed: Changed from react-router-dom
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { cn } from "@/lib/utils";
 import { projects } from '@/app/data'; 
@@ -61,7 +62,7 @@ const Projects: React.FC = () => {
                            </div>
                         </div>
                         
-                        <img 
+                        <Image 
                             src={project.image} 
                             alt={project.title} 
                             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"

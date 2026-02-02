@@ -2,24 +2,23 @@
 
 import React from 'react';
 import { Database, Layout, Server, Code2, Wrench } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { cn } from "@/lib/utils";
+import { motion, Variants } from 'framer-motion';
 
 const SKILL_CATEGORIES = [
   {
     name: 'Frontend',
     icon: Layout,
-    skills: ['React', 'Next.js', 'TailwindCSS', 'HTML/CSS', 'Framer Motion'],
+    skills: ['React', 'Next.js', 'TailwindCSS', 'HTML/CSS'],
   },
   {
     name: 'Backend',
     icon: Server,
-    skills: ['Django', 'FastAPI', 'Node.js', 'RESTful APIs'],
+    skills: ['Django', 'FastAPI', 'RESTful APIs'],
   },
   {
     name: 'Database',
     icon: Database,
-    skills: ['PostgreSQL', 'Supabase', 'SQL', 'Redis'],
+    skills: ['PostgreSQL', 'Supabase', 'SQL'],
   },
   {
     name: 'Languages',
@@ -34,7 +33,7 @@ const SKILL_CATEGORIES = [
 ];
 
 // Animation Variants
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -44,7 +43,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { 
     opacity: 1, 

@@ -2,8 +2,6 @@
 
 import React from 'react';
 import { Heart, Coffee, Star } from 'lucide-react';
-import Image from 'next/image'; // For Next.js optimization
-import { cn } from "@/lib/utils";
 
 const About: React.FC = () => {
   return (
