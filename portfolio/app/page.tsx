@@ -5,7 +5,6 @@ import TechStack from "@/app/components/TechStack";
 import { Reveal } from "@/app/components/ui/Reveal";
 import Projects from "@/app/components/Projects";
 import Contact from "@/app/components/Contact";
-import Footer from "@/app/components/Footer";
 
 export default function Home(){
   return (
@@ -24,7 +23,6 @@ export default function Home(){
         <Reveal>
           <Contact />
         </Reveal>
-        <Footer />
     </main>
   );
 }
