@@ -1,3 +1,3 @@
 # My Portfolio
 
-Tech Stack: TypeScript + NextJS + Tailwind CSS + MongoDB
+Tech Stack: TypeScript + NextJS + Tailwind CSS 
