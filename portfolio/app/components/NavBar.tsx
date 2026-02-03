@@ -86,7 +86,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, isHome = true }) => {
             className="px-5 py-2 rounded-full bg-slate-900 text-white text-sm font-medium hover:bg-brand-600 transition-all shadow-lg shadow-slate-900/10 flex items-center gap-2"
           >
             <Sparkles size={14} />
-            Let's Talk
+            Let&apos;s Talk
           </Link>
         </div>
 

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ExternalLink, Github, FolderGit2, Globe, ArrowRight } from 'lucide-react';
-import Link from 'next/link'; // Fixed: Changed from react-router-dom
+import Link from 'next/link'; 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { cn } from "@/lib/utils";
@@ -31,15 +31,15 @@ const Projects: React.FC = () => {
                 </p>
             </div>
             
-            <a 
-              href="https://github.com/yourusername" 
+            <Link
+              href="https://github.com/mercyXp" 
               target="_blank" 
               rel="noreferrer" 
               className="group flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-700 transition-colors bg-brand-50 px-5 py-2.5 rounded-full"
             >
                 View GitHub 
                 <ExternalLink size={18} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform"/>
-            </a>
+            </Link>
         </motion.div>
 
         {/* Projects Grid */}
@@ -64,7 +64,9 @@ const Projects: React.FC = () => {
                         
                         <Image 
                             src={project.image} 
-                            alt={project.title} 
+                            alt={project.title}
+                            width={600}
+                            height={400}
                             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
                         />
                     </Link>
@@ -86,7 +88,7 @@ const Projects: React.FC = () => {
                             </h3>
                         </Link>
 
-                        <p className="text-slate-600 mb-8 flex-grow leading-relaxed">
+                        <p className="text-slate-600 mb-8 grow leading-relaxed">
                             {project.description}
                         </p>
                         

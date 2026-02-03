@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Heart, Coffee, Star } from 'lucide-react';
+import Image from 'next/image';
 
 const About: React.FC = () => {
   return (
@@ -43,7 +44,7 @@ const About: React.FC = () => {
                           Using Next.js Image for better performance. 
                           Replace src with your actual photo path later.
                         */}
-                        <img 
+                        <Image
                             src="/mercy-avatar.JPG" 
                             alt="Mercy Avatar" 
                             className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 ease-out"

@@ -11,11 +11,14 @@ export interface Project {
   problemStatement: string;
   solution: string;
   duration: string;
+  publishedDate: string; // NEW
+  projectType: 'Web App' | 'Mobile App' | 'System Tool' | 'API' | 'Desktop App'; // NEW
   features: string[];
   tags: string[];
   link: string;
   image: string;
   github: string;
+  screenshots?: string[]; // NEW - Optional additional screenshots
 }
 
 export interface BlogPost {
@@ -37,10 +40,12 @@ export const projects: Project[] = [
   {
     id: "tooleryhub",
     title: "TooleryHub",
-    description: "A comprehensive utility platform designed to streamline daily developer tasks. Featuring AI-integrated tools for productivity.",
-    problemStatement: "Developers constantly switch between multiple tabs and tools for simple tasks like JSON formatting, regex testing, and base64 encoding. This context switching breaks flow and decreases productivity.",
+    description: "A global digital tools platform offering productivity, media, and business tools. Featuring AI-integrated tools for productivity.",
+    problemStatement: "Most people constantly switch between multiple tabs and tools for simple tasks like JSON formatting, regex testing, and base64 encoding. This context switching breaks flow and decreases productivity.",
     solution: "TooleryHub centralizes essential developer utilities into a single, intuitive dashboard. Integrated with Gemini AI, it goes beyond simple tools by offering intelligent code explanation, error debugging, and snippet optimization.",
     duration: "3 Weeks",
+    publishedDate: "January 15, 2025",
+    projectType: "Web App",
     features: [
       "AI-powered code analysis and optimization",
       "Real-time JSON/XML formatter and validator",
@@ -59,6 +64,8 @@ export const projects: Project[] = [
     problemStatement: "Tourism information for Zambia is often fragmented across various outdated websites, making it difficult for international travelers to plan trips or discover hidden local gems.",
     solution: "SmartTourZambia provides a unified, interactive platform for discovering Zambia. It features dynamic maps, curated local guides, and a direct booking system that connects tourists with local service providers.",
     duration: "2 Months",
+    publishedDate: "December 10, 2024",
+    projectType: "Web App",
     features: [
       "Interactive map with points of interest",
       "Local guide booking system",
@@ -77,6 +84,8 @@ export const projects: Project[] = [
     problemStatement: "Remote technical interviews and pair programming sessions often suffer from latency and lack of environment consistency when sharing code.",
     solution: "CodeX is a real-time collaborative code editor that supports multiple languages. It allows developers to write, execute, and debug code simultaneously in a shared environment with persistent session history.",
     duration: "4 Weeks",
+    publishedDate: "November 20, 2024",
+    projectType: "Web App",
     features: [
       "Real-time operational transformation (OT) collaboration",
       "Integrated code execution engine",
@@ -95,6 +104,8 @@ export const projects: Project[] = [
     problemStatement: "Students struggle to find qualified tutors for niche subjects, while tutors lack a professional platform to manage bookings and payments.",
     solution: "MayaTutor bridges the gap by offering a marketplace for education. It handles discovery, scheduling, payments, and video delivery in one seamless application.",
     duration: "6 Weeks",
+    publishedDate: "October 5, 2024",
+    projectType: "Web App",
     features: [
       "Advanced tutor search filters",
       "Integrated video conferencing",
