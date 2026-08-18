@@ -13,12 +13,12 @@ const SKILL_CATEGORIES = [
   {
     name: 'Backend',
     icon: Server,
-    skills: ['Django', 'FastAPI', 'RESTful APIs'],
+    skills: ['Django', 'FastAPI', 'RESTful APIs', 'NestJS'],
   },
   {
     name: 'Database',
     icon: Database,
-    skills: ['PostgreSQL', 'Supabase', 'SQL'],
+    skills: ['PostgreSQL', 'MongoDB', 'SQL'],
   },
   {
     name: 'Languages',
@@ -28,7 +28,7 @@ const SKILL_CATEGORIES = [
   {
     name: 'Tools',
     icon: Wrench,
-    skills: ['Git & GitHub', 'Docker', 'Postman', 'Linux', 'System Design'],
+    skills: ['Git & GitHub', 'Supabase','Docker', 'Postman', 'Linux', 'System Design'],
   },
 ];
 

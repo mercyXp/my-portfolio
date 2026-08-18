@@ -38,44 +38,47 @@ export interface BlogPost {
 
 export const projects: Project[] = [
   {
-    id: "tooleryhub",
-    title: "TooleryHub",
-    description: "A global digital tools platform offering productivity, media, and business tools. Featuring AI-integrated tools for productivity.",
-    problemStatement: "Most people constantly switch between multiple tabs and tools for simple tasks like JSON formatting, regex testing, and base64 encoding. This context switching breaks flow and decreases productivity.",
-    solution: "TooleryHub centralizes essential developer utilities into a single, intuitive dashboard. Integrated with Gemini AI, it goes beyond simple tools by offering intelligent code explanation, error debugging, and snippet optimization.",
+    id: "tichicleaning",
+    title: "Tichi Cleaning Services",
+    description: "A booking system providing professional cleaning services for homes & businesses.",
+    problemStatement: "Most households and businesses in Zambia rely on informal and inefficient ways to find and book cleaning services, making it difficult to access reliable cleaners, schedule appointments, and manage service requests.",
+    solution: "A user-friendly online booking platform that allows customers to easily browse cleaning services, select their preferred date and time, submit booking requests, and receive confirmation, while helping Tichi Cleaning Services efficiently manage appointments and customer requests",
     duration: "3 Weeks",
-    publishedDate: "January 15, 2025",
+    publishedDate: "August 8, 2026",
     projectType: "Web App",
     features: [
-      "AI-powered code analysis and optimization",
-      "Real-time JSON/XML formatter and validator",
-      "Regex tester with explanation",
-      "Secure and local-first data processing"
+      "Online booking for residential and commercial cleaning services",
+      "Service selection with preferred date and time scheduling",
+      "Customer booking and request management",
+      "Admin dashboard for managing bookings and customers"
     ],
-    tags: ["React", "AI Integration", "Tailwind", "Vite"],
-    link: "https://aistudio.google.com/apps/drive/18ukuz3OuvXSZnMQzWLNtUZi1v_5FmlI9?fullscreenApplet=true",
-    image: "https://picsum.photos/id/1/600/400",
-    github: "#"
+    tags: ["Next.js", "TypeScript", "Supabase", "Tailwind"],
+    link: "https://tichicleaning.com",
+    image: "/tichicleaning.png",
+    github: "https://github.com/TICHI-SERVICES"
   },
   {
-    id: "smart-tour-zambia",
-    title: "SmartTourZambia",
-    description: "An interactive tourism web application promoting Zambia's rich heritage. Includes interactive maps, booking features, and local guides.",
-    problemStatement: "Tourism information for Zambia is often fragmented across various outdated websites, making it difficult for international travelers to plan trips or discover hidden local gems.",
-    solution: "SmartTourZambia provides a unified, interactive platform for discovering Zambia. It features dynamic maps, curated local guides, and a direct booking system that connects tourists with local service providers.",
-    duration: "2 Months",
-    publishedDate: "December 10, 2024",
+    id: "bluestick-cooperative",
+    title: "Blue-Stick Cooperative",
+    description: "A digital cooperative management platform that helps members access financial services, manage their accounts, and complete onboarding online.",
+    problemStatement: "Traditional cooperative processes can be time-consuming and heavily dependent on paperwork, making it difficult for members to register, submit documents, access financial information, and manage their cooperative activities efficiently.",
+    solution: "Blue-Stick Cooperative provides a centralized digital platform for member registration, KYC verification, financial management, loan applications, and administrative operations.",
+    duration: "3 Months",
+    publishedDate: "August 18, 2026",
     projectType: "Web App",
     features: [
-      "Interactive map with points of interest",
-      "Local guide booking system",
-      "Itinerary planner",
-      "Community reviews and ratings"
+      "Online member registration and authentication",
+      "KYC document submission and verification",
+      "Loan application and management",
+      "Member financial dashboard",
+      "Digital accounting and transaction records",
+      "Administrative management portal"
     ],
-    tags: ["Django", "PostgreSQL", "React", "Maps API"],
-    image: "https://picsum.photos/id/28/600/400",
-    link: "#",
-    github: "#"
+    tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS"],
+    image: "/bluestick.png",
+    link: "https://bluestickcooperative.org",
+    github: "https://github.com/mercyXp/cooperative"
+
   },
   {
     id: "codex",
