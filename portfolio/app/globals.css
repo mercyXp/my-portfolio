@@ -1,5 +1,6 @@
 /* Tailwind CSS v4 */
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* ========================================
    Custom Theme Extensions

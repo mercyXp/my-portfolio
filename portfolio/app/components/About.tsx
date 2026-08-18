@@ -39,15 +39,17 @@ const About: React.FC = () => {
                   <div className="absolute -inset-2 rounded-full bg-gradient-to-tr from-brand-500 to-indigo-500 opacity-20 animate-pulse"></div>
                   
                   <div className="w-44 h-44 rounded-full bg-white p-1.5 shadow-xl relative z-10">
-                    <div className="w-full h-full rounded-full overflow-hidden">
+                    <div className="relative w-full h-full rounded-full overflow-hidden">
                         {/* 
                           Using Next.js Image for better performance. 
                           Replace src with your actual photo path later.
                         */}
                         <Image
                             src="/mercy-avatar.JPG" 
-                            alt="Mercy Avatar" 
-                            className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 ease-out"
+                            alt="Mercy Avatar"
+                            fill
+                            sizes="176px"
+                            className="object-cover hover:scale-110 transition-transform duration-700 ease-out"
                         />
                     </div>
                   </div>

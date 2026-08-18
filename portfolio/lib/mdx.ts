@@ -5,7 +5,11 @@ import matter from 'gray-matter';
 const BLOG_PATH = path.join(process.cwd(), 'content/blog');
 
 export async function getBlogPosts() {
-  const files = fs.readdirSync(BLOG_PATH);
+  if (!fs.existsSync(BLOG_PATH)) {
+    return [];
+  }
+
+  const files = fs.readdirSync(BLOG_PATH).filter((fileName) => fileName.endsWith('.mdx'));
 
   const posts = files.map((fileName) => {
     const slug = fileName.replace('.mdx', '');
@@ -24,6 +28,11 @@ export async function getBlogPosts() {
 
 export async function getPostBySlug(slug: string) {
   const fullPath = path.join(BLOG_PATH, `${slug}.mdx`);
+
+  if (!fs.existsSync(fullPath)) {
+    return null;
+  }
+
   const fileContent = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContent);
 
